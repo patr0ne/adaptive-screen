@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body,
+h2,
+p {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.container {
+    padding: 129px 375px;
+    display: block;
+    position: relative;
+}
+
+.rectangle {
+    width: 50px;
+    height: 2px;
+    background: #3685EE;
+}
+
+.header {
+    margin: 15px 0 50px 0;
+
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 51px;
+    letter-spacing: 0.02em;
+    color: #454750;
+}
+
+.cards-container {
+    width: 1170px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(2, 370px);
+    grid-gap: 30px;
+
+    grid-template-areas:
+    "card card card"
+    "card card card"
+}
+
+.cards-container__card {
+    position: relative;
+    width: 370px;
+    height: 370px;
+    background: #FEFEFE;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.cards-container__card-img {
+    width: 370px;
+    height: 273px;
+}
+
+.cards-container__btn-block {
+    position: absolute;
+    display: none;
+    margin: auto;
+    top: -25%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background: #FEFEFE;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.cards-container__btn-zoom {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+
+.cards-container__img-block:hover 
+.cards-container__btn-block {
+    display: block;
+}
+
+.cards-container__description {
+    padding: 20px 30px;
+    position: relative;
+    top: -5px;
+
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    color: #454750;
+}
+
+@media (max-width: 1030px) {
+    .container {
+        padding: 114px 127px;
+    }
+
+    .header {
+        margin: 14px 0 46.62px 0;
+    }
+
+    .cards-container {
+        width: 770px;
+
+        grid-template-columns: repeat(2, 370px);
+        grid-template-rows: repeat(3, 370px);
+        grid-column-gap: 30px;
+        grid-row-gap: 50px;
+
+        grid-template-areas:
+        "card card"
+        "card card"
+        "card card"
+    }
+}
+
+@media (max-width: 770px) {
+    .container {
+        padding: 82px 25px;
+    }
+
+    .rectangle {
+        width: 46.62px;
+        height: 1.86px;
+    }
+
+    .header {
+        margin: 14px 0 46.62px 0;
+    }
+
+    .cards-container {
+        width: 718px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 345px);
+        grid-template-rows: repeat(3, 345px);
+        grid-column-gap: 27.97px;
+        grid-row-gap: 46.62px;
+    }
+
+    .cards-container__card {
+        width: 345px;
+        height: 345px;
+    }
+
+    .cards-container__card-img {
+        width: 345px;
+        height: 255px;
+    }
+
+    .cards-container__description {
+        padding: 17.41px 30px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        padding: 64px 20px;
+    }
+
+    .rectangle {
+        width: 36.19px;
+        height: 1.45px;
+    }
+
+    .header {
+        margin: 10.86px 0 29.78px 0;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .cards-container {
+        width: 280px;
+
+        grid-template-columns: repeat(1, 280px);
+        grid-template-rows: repeat(6, 280px);
+        grid-row-gap: 24.03px;
+
+        grid-template-areas:
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+    }
+
+    .cards-container__card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cards-container__card-img {
+        width: 280px;
+        height: 206.60px;
+    }
+
+    .cards-container__description {
+        padding: 14.41px 25px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
